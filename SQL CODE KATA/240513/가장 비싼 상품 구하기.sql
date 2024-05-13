@@ -1,0 +1,8 @@
+SELECT price AS MAX_PRICE
+FROM product
+ORDER BY RANK() OVER(ORDER BY price DESC)
+LIMIT 1
+
+
+SELECT MAX(price) AS MAX_PRICE
+FROM product
